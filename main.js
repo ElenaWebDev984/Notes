@@ -14,10 +14,12 @@ const model = {
     const note = {
       // 1. создадим новую заметку
     }
- 
     // 2. добавим заметку в начало списка
     // 3. обновим view
+    isShowOnlyFavorite: false,
+    toggleShowOnlyFavorite(isShowOnlyFavorite) { ... },
     updateNotesView() {
+        const notesToRender = // используем метод filter для фильтрации заметок
         // 1. рендерит список заметок (вызывает метод view.renderNotes)
         // 2. рендерит количество заметок (вызывает метод view.renderNotesCount)
       }
