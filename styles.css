@@ -13,6 +13,10 @@ body {
     min-width: 375px;
 }
 
+h1 {
+    text-transform: uppercase;
+}
+
 ul {
     list-style: none;
 }
