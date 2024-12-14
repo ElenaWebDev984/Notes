@@ -23,7 +23,28 @@
     </header>
     <main>
         <div class="container">
-            <form class="note-form"></form>
+            <form class="note-form">
+                <fieldset class="fieldset">
+                    <legend class="label">Выберите цвет заметки</legend>
+                    <ul class="radio-list">
+                      <li>
+                        <input checked class="radio" type="radio" name="color" value="yellow" aria-label="yellow" />
+                      </li>
+                      <li>
+                        <input class="radio" type="radio" name="color" value="red" aria-label="red" />
+                      </li>
+                      <li>
+                        <input class="radio" type="radio" name="color" value="green" aria-label="green" />
+                      </li>
+                      <li>
+                        <input class="radio" type="radio" name="color" value="blue" aria-label="blue" />
+                      </li>
+                      <li>
+                        <input class="radio" type="radio" name="color" value="purple" aria-label="purple" />
+                      </li>
+                    </ul>
+                  </fieldset>
+            </form>
             <div class="filter-box"></div>
             <ul class="notes-list"></ul>
             <div class="messages-box"></div>
