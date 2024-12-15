@@ -10,13 +10,13 @@ const MOCK_NOTES = [
  
 const model = {
   notes: MOCK_NOTES,
+  isShowOnlyFavorite: false,
   addNote(title, content, color) {
     const note = {
       // 1. создадим новую заметку
     }
     // 2. добавим заметку в начало списка
     // 3. обновим view
-    isShowOnlyFavorite: false,
     toggleShowOnlyFavorite(isShowOnlyFavorite) { ... },
     updateNotesView() {
         const notesToRender = // используем метод filter для фильтрации заметок
@@ -49,7 +49,8 @@ const colors = {
     init() {
       this.renderNotes(model.notes)
       const form = document.querySelector('.note-form')
-    form.addEventListener('submit', (event) => {
+      
+      form.addEventListener('submit', (event) => {
       // получаем данные из полей формы
       // передаем данные в контроллер
  
@@ -58,12 +59,7 @@ const colors = {
     },
     renderNotes(notes) { ... }
   }
-   
-  function init() {
-    view.init()
-  }
-   
-  init()
+
 
   const controller = {
     addNote(title, content, color) {
@@ -77,5 +73,11 @@ const colors = {
       view.showMessage('Заметка добавлена')
     },
   }
+
+  function init() {
+    view.init()
+  }
+   
+  init()
  
   
