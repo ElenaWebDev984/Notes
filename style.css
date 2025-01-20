@@ -11,20 +11,20 @@ body {
   font-family: Montserrat, sans-serif;
   font-style: normal;
   min-width: 375px;
+  background: #FFFFFF;
 }
 
 .container {
   height: 100%;
   width: 100%;
-  max-width: 1170px; 
+  max-width: 1280px; 
   padding: 0 15px; 
-  margin-left: auto; 
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 header {
-  padding: 14px 0;
-  background: #a895a2;
+  padding: 20px 0;
+  box-shadow: 0px 1px 3px 0px #0B0C0D29;
 }
 
 img {
