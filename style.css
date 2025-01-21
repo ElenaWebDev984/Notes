@@ -67,6 +67,13 @@ span {
 
 /* СТИЛИ MAIN */
 
+
+input[type="checkbox"] {
+  appearance: none;
+  background: url(./assets/images/checkbox\ inactive.svg) no-repeat;
+  cursor: pointer;
+}
+
 .new-notes-wrapper {
   display: flex;
   flex-direction: column;
