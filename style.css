@@ -11,24 +11,22 @@ body {
   font-family: Montserrat, sans-serif;
   font-style: normal;
   min-width: 375px;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 .container {
   height: 100%;
   width: 100%;
-  max-width: 1280px; 
-  padding: 0 15px; 
+  max-width: 1170px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
+/* СТИЛИ HEADER */
+
 header {
   padding: 20px 0;
-  box-shadow: 0px 1px 3px 0px #0B0C0D29;
-}
-
-img {
-  width: 24px;
+  box-shadow: 0px 1px 3px 0px #0b0c0d29;
 }
 
 .header-wrapper {
@@ -37,25 +35,27 @@ img {
   align-items: center;
 }
 
+#logo {
+  width: 110px;
+  height: 24px;
+}
+
+.img-notes {
+  width: 24px;
+  height: 24px;
+}
+
 .counter-wrapper {
   display: flex;
   justify-content: end;
   align-items: center;
+  gap: 12px;
 }
 
-.notes_wrapper {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
-
-h1 {
-  font-weight: 700px;
-  font-size: 26px;
+.text-counter {
+  font-size: 16px;
+  font-weight: 500;
   line-height: 24px;
-  text-transform: uppercase;
-  cursor: pointer;
-  padding-left: 10px;
 }
 
 span {
@@ -65,16 +65,30 @@ span {
   padding-left: 10px;
 }
 
-.main-wrapper {
+/* СТИЛИ MAIN */
+
+.new-notes-wrapper {
   display: flex;
   flex-direction: column;
   align-items: start;
   min-height: 800px;
 }
 
-.wrapper-notes_name {
-  display: flex;
-  flex-direction: column;
+form {
+  width: 1152px px;
+  height: 228px px;
+  top: 84px;
+  left: 64px;
+  padding: 24px 0px 0px 0px;
+  gap: 12px;
+  border-radius: 4px 0px 0px 0px;
+  opacity: 0px;
+
+  /* box-shadow: 0px 8px 12px 0px #0B0C0D14; */
+
+  box-shadow: 0px 16px 24px 0px #0b0c0d0a;
+
+  /* box-shadow: 0px 1px 2px 0px #0B0C0D14; */
 }
 
 .wrapper-add_notes {
@@ -96,37 +110,37 @@ span {
 fieldset {
   all: unset;
   margin: 20px 0;
-  }
-   
+}
+
 legend {
-  all: unset
-  }
+  all: unset;
+}
 
 input {
   border: solid 1px;
   border-radius: 5px;
 }
 
-  ul {
-    list-style: none;
-    cursor: pointer;
-  }
-   
+ul {
+  list-style: none;
+  cursor: pointer;
+}
+
 .radio-list {
   display: flex;
   gap: 14px;
   list-style: none;
   padding-left: 0;
-  }
-   
+}
+
 button {
   border: none;
   background-color: #a895a2;
-  cursor: pointer; 
+  cursor: pointer;
   width: 230px;
   height: 36px;
   border-radius: 10px;
-  transition: 0.2s; 
+  transition: 0.2s;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -134,9 +148,9 @@ button {
 }
 
 button:hover {
-  transform: translateY(-5px); 
+  transform: translateY(-5px);
 }
-   
+
 .radio {
   appearance: none;
   display: inline-block;
@@ -145,31 +159,31 @@ button:hover {
   border-radius: 50%;
   background-color: green;
 }
-   
+
 .radio[value="red"] {
-  background-color: #F37D7D;
+  background-color: #f37d7d;
 }
-   
+
 .radio[value="green"] {
-  background-color: #C2F37D;
+  background-color: #c2f37d;
 }
-   
+
 .radio[value="blue"] {
-  background-color: #7DE1F3;
+  background-color: #7de1f3;
 }
-   
+
 .radio[value="yellow"] {
-  background-color: #F3DB7D;
+  background-color: #f3db7d;
 }
-   
+
 .radio[value="purple"] {
-  background-color: #E77DF3;
+  background-color: #e77df3;
 }
-   
+
 .radio:checked {
   border-color: white;
-  box-shadow: 0 0 0 3px white, /* Внутренняя обводка для создания промежутка */
-  0 0 0 4.5px #007BFF; /* Внешняя обводка */
+  box-shadow: 0 0 0 3px white,
+    /* Внутренняя обводка для создания промежутка */ 0 0 0 4.5px #007bff; /* Внешняя обводка */
 }
 
 .wrapper-checkbox {

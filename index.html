@@ -10,56 +10,62 @@
     <title>Notes</title>
 </head>
 <body>
-    <div id="app"></div>
+    <!-- <div id="app"></div> -->
     <header>
         <div class="container">
             <div class="header-wrapper">
-                <img src="./assets/images/📝Notes-logo.svg" alt="logo">
+                <img src="./assets/images/📝Notes-logo.svg" alt="logo" id="logo">
                 <div class="counter-wrapper">
-                    <img src="./assets/images/notes.svg" alt="notes">
+                    <img src="./assets/images/notes.svg" alt="img-notes" class="img-notes">
                     <p class="text-counter">Всего заметок: <span class="counter">0</span></p>
                 </div>
             </div>
         </div>
     </header>
     <main>
-        <div class="container">
-            <div class="main-wrapper">
-                <form class="note-form">
-                    <fieldset class="fieldset">
-
-                            <legend for="">Название заметки</legend>
-                            <input type="text" placeholder="Напишите название новой заметки...">
-                        
-                        <div class="wrapper-add_notes">
-                            <div class="wrapper-description">
-                                <label for="">Описание новой заметки</label>
-                                <input type="text" placeholder="Напишите описание новой заметки...">
+        <section class="new-notes">
+            <div class="container">
+                <div class="new-notes-wrapper">
+                    <form class="form">
+                        <fieldset class="fieldset">
+                            <div class="title-wrapper">
+                                <label for="" class="new-note-label">Название заметки</label>
+                                <input type="text" placeholder="Напишите название новой заметки..." class="new-note-title">
                             </div>
-                            <div class="wrapper-items">
-                                <legend class="label">Выберите цвет заметки</legend>
-                                <ul class="radio-list">
-                                    <li>
-                                        <input checked class="radio" type="radio" name="color" value="yellow" aria-label="yellow" />
-                                    </li>
-                                    <li>
-                                        <input class="radio" type="radio" name="color" value="red" aria-label="red" />
-                                    </li>
-                                    <li>
-                                        <input class="radio" type="radio" name="color" value="green" aria-label="green" />
-                                    </li>
-                                    <li>
-                                        <input class="radio" type="radio" name="color" value="blue" aria-label="blue" />
-                                    </li>
-                                    <li>
-                                        <input class="radio" type="radio" name="color" value="purple" aria-label="purple" />
-                                    </li>
-                                </ul>
-                                <button type="submit">Добавить заметку</button>
+                            <div class="description-wrapper">
+                                <div class="form-description">
+                                    <label for="" class="description-label">Описание новой заметки</label>
+                                    <textarea class="description-text" placeholder="Напишите описание новой заметки..."></textarea>
+                                </div>
+                                <div class="wrapper-items">
+                                    <legend class="colors-label">Выберите цвет заметки</legend>
+                                    <ul class="radio-list">
+                                        <li>
+                                            <input checked class="radio" type="radio" name="color" value="yellow" aria-label="yellow" />
+                                        </li>
+                                        <li>
+                                            <input class="radio" type="radio" name="color" value="red" aria-label="red" />
+                                        </li>
+                                        <li>
+                                            <input class="radio" type="radio" name="color" value="green" aria-label="green" />
+                                        </li>
+                                        <li>
+                                            <input class="radio" type="radio" name="color" value="blue" aria-label="blue" />
+                                        </li>
+                                        <li>
+                                            <input class="radio" type="radio" name="color" value="purple" aria-label="purple" />
+                                        </li>
+                                    </ul>
+                                    <button type="submit">Добавить заметку</button>
+                                </div>
                             </div>
-                        </div>
-                    </fieldset>
-                </form>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="notes-list">
+            <div class="container">
                 <div class="wrapper-checkbox">
                     <input type="checkbox">
                     Показать только избранные заметки
@@ -70,7 +76,7 @@
                     <p>У вас нет еще ни одной заметки Заполните поля выше и создайте свою первую заметку!</p>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <script src="main.js"></script>
