@@ -1,3 +1,21 @@
+:root {
+  --note-color1: #F3DB7D;
+  --note-color2: #C2F37D;
+  --note-color3: #7DE1F3;
+  --note-color4: #F37D7D;
+  --note-color5: #E77DF3;
+  --btn-color:  #457CDC;
+  --message-done-color: #47B27D;
+  --message-error-color: #F23D5B;
+  --text-color: #000000;
+  --text-form-color: #919191;
+  --background-color: #FFFFFF;
+  --background-main-base-color: #FAFAFC;
+  --border-color: #E8E8E8;
+  --radio-checked-color-ext: #007BFF;
+  --radio-checked-int: white;
+}
+
 *,
 *::before,
 *::after {
@@ -10,8 +28,13 @@ html,
 body {
   font-family: Montserrat, sans-serif;
   font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  height: 100vh;
   min-width: 375px;
-  background: #ffffff;
+  background: var(--background-color);
+  color: var(--text-color);
+  display: block;
 }
 
 .container {
@@ -19,14 +42,18 @@ body {
   width: 100%;
   max-width: 1170px;
   padding: 0 15px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  /* border: 1px solid red; */
 }
 
 /* СТИЛИ HEADER */
 
 header {
-  padding: 20px 0;
+  padding: 18px 0;
   box-shadow: 0px 1px 3px 0px #0b0c0d29;
+  margin-bottom: 24px;
+  font-size: 16px;
 }
 
 .header-wrapper {
@@ -53,109 +80,87 @@ header {
 }
 
 .text-counter {
-  font-size: 16px;
   font-weight: 500;
-  line-height: 24px;
 }
 
 span {
-  font-weight: 700px;
-  font-size: 16px;
-  line-height: 24px;
+  font-weight: 700;
   padding-left: 10px;
 }
 
 /* СТИЛИ MAIN */
 
-
-input[type="checkbox"] {
-  appearance: none;
-  background: url(./assets/images/checkbox\ inactive.svg) no-repeat;
-  cursor: pointer;
-}
-
-.new-notes-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  min-height: 800px;
-}
-
 form {
-  width: 1152px px;
-  height: 228px px;
-  top: 84px;
-  left: 64px;
-  padding: 24px 0px 0px 0px;
+  width: 1152px;
+  font-size: 12px;
+  padding: 10px;
   gap: 12px;
-  border-radius: 4px 0px 0px 0px;
-  opacity: 0px;
-
-  /* box-shadow: 0px 8px 12px 0px #0B0C0D14; */
-
-  box-shadow: 0px 16px 24px 0px #0b0c0d0a;
-
-  /* box-shadow: 0px 1px 2px 0px #0B0C0D14; */
+  border-radius: 4px;
+  color: var(--text-color-form);
+  box-shadow: 0px 8px 12px 0px #0B0C0D14, 0px 16px 24px 0px #0b0c0d0a;
 }
 
-.wrapper-add_notes {
-  display: flex;
-  align-items: stretch;
-}
-
-.wrapper-description {
+fieldset {
+  all: unset;
+  margin: 24px;
   display: flex;
   flex-direction: column;
+}
+
+/* legend {
+  all: unset;
+} */
+
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+input[type="text"], textarea {
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  width: 344px;
+  padding: 6px 12px;
+}
+
+textarea[class="description-text"] {
+  width: 100%;
+  min-height: 84px;
+  resize: none;
+}
+
+::placeholder {
+  font-size: 14px;
+}
+
+.description-wrapper {
+  display: flex;
+}
+
+.form-description {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-right: 24px;
 }
 
 .wrapper-items {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-}
-
-fieldset {
-  all: unset;
-  margin: 20px 0;
-}
-
-legend {
-  all: unset;
-}
-
-input {
-  border: solid 1px;
-  border-radius: 5px;
-}
-
-ul {
-  list-style: none;
-  cursor: pointer;
-}
+} 
 
 .radio-list {
   display: flex;
-  gap: 14px;
   list-style: none;
   padding-left: 0;
+  margin: 12px;
 }
 
-button {
-  border: none;
-  background-color: #a895a2;
-  cursor: pointer;
-  width: 230px;
+.radio-list > li {
+  width: 36px;
   height: 36px;
-  border-radius: 10px;
-  transition: 0.2s;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  text-align: center;
-}
-
-button:hover {
-  transform: translateY(-5px);
+  flex-grow: 1;
 }
 
 .radio {
@@ -164,36 +169,78 @@ button:hover {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: green;
-}
-
-.radio[value="red"] {
-  background-color: #f37d7d;
-}
-
-.radio[value="green"] {
-  background-color: #c2f37d;
-}
-
-.radio[value="blue"] {
-  background-color: #7de1f3;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 .radio[value="yellow"] {
-  background-color: #f3db7d;
+  background-color: var(--note-color1);
+}
+ 
+.radio[value="green"] {
+  background-color: var(--note-color2);
+}
+ 
+.radio[value="blue"] {
+  background-color: var(--note-color3);
 }
 
+.radio[value="red"] {
+  background-color: var(--note-color4);
+}
+ 
 .radio[value="purple"] {
-  background-color: #e77df3;
+  background-color: var(--note-color5);
 }
 
 .radio:checked {
-  border-color: white;
-  box-shadow: 0 0 0 3px white,
-    /* Внутренняя обводка для создания промежутка */ 0 0 0 4.5px #007bff; /* Внешняя обводка */
+  border-color: var(--radio-checked-int);
+  box-shadow: 0 0 0 3px var(--radio-checked-int), 
+  0 0 0 4.5px var(--radio-checked-color-ext); 
+}
+
+button {
+  border: none;
+  background-color: var(--btn-color);
+  padding: 6px auto;
+  cursor: pointer;
+  width: 230px;
+  height: 36px;
+  border-radius: 10px;
+  transition: 0.2s;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+button:hover {
+  transform: translateY(-5px);
 }
 
 .wrapper-checkbox {
   display: flex;
-  margin: 20px 0;
+  justify-content: end;
+  gap: 8px;
+  margin: 24px 0 12px;
+  font-size: 12px;
+} 
+
+input[type="checkbox"] {
+  appearance: none;
+  background: url(./assets/images/checkbox\ inactive.svg) no-repeat;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+li[class="no-notes"] {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
 }
