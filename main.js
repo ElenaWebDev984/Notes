@@ -13,10 +13,11 @@ const colors = {
 const images = {
   noteDone: 'assets\images\Done.svg',
   noteMaxLengthError: 'assets\images\warning.svg',
-  heartActive: 'assets\images\heart _active.svg',
-  heartInactive: 'assets\images\heart _inactive.svg',
-  checkboxActive: 'assets\images\checkbox _active.svg',
-  checkboxInactive:'assets\images\checkbox _inactive.svg',
+  heartActive: 'assets\images\heartActive.svg',
+  heartInactive: 'assets\images\heartInactive.svg',
+  checkboxActive: 'assets\images\checkboxActive.svg',
+  checkboxInactive:'assets\images\checkboxInactive.svg',
+  deleteNotBtn: 'assets\images\trash.svg',
 };
 
 const messages = {
